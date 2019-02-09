@@ -1,0 +1,282 @@
+@charset "UTF-8"; 
+
+// ---------------------------------------------
+//  common_importフォルダを読み込む
+// ---------------------------------------------
+
+// float .ColR系
+@import "common_import/float";
+
+// text-align .txtR系 と vertical-align
+@import "common_import/align";
+
+// margin .mb00系
+@import "common_import/margin";
+
+// font-size .txt00系
+@import "common_import/font-size";
+
+// clearfix .cf
+@import "common_import/clearfix";
+
+$primary-color: #fff;
+$secondary-color: #000;
+$third-color: #34739f;
+$font: 10px;
+$font1: 16px;
+$font2: 50px;
+
+.logo {
+    align-items: center;
+    width: 100%;
+    height: 73px;
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: center;
+    &:hover .logoImg{  
+          opacity: 0.4;
+    }
+    .logoImg {
+         transition: 300ms;
+     }
+    h3 {
+        position: absolute;
+        z-index: 999999999;
+        display: flex;
+        justify-content: center;
+        }
+    }
+header {
+    .secondNav {
+        #navi {
+            ul {
+                margin-top: 0px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                padding: 0;
+                }
+            }
+        }
+     }     
+.secondNav {
+    li {
+        padding: 22px 45px 21px 45px;
+        text-align: center;
+        font-weight: 600;
+        border-right: #e5e5e5 solid 1px;
+            &:first-child {
+                border-left: #e5e5e5 solid 1px;
+                }
+            &:hover {
+                background-color: #73a1c2;
+                color: #fff;
+		span {
+                    color: #fff;
+                    }
+                a {
+                    color: #fff;
+		}
+            }
+        }
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+             }
+        }
+#banner {
+        background-color: #d4e4e0;
+    #banwrap{
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .bgmind{
+        width: auto;
+        height: auto;
+    }
+}
+#bannerTitle {
+    #titleImg {
+        z-index: 999999999;
+        position: relative;
+        top: -16px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #e5e5e5;    
+    }
+}
+#content {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#mainContent {
+    margin-top: 30px;
+    .dnaTitle {
+        padding: 20px 0px;
+    }
+    .firstCon {
+       width: 460px;
+        float: left;
+        line-height: 2.2;
+    }
+    p.content {
+        background: url(../img/bg_mind01.png) no-repeat center;
+        font-size: 13px;
+        padding-right: 15px;
+        line-height: 2.0;
+        letter-spacing: 2px;
+        color: #333333b5;
+        text-align: justify;
+    }
+}
+#secondContent {
+    margin-top: 40px;
+    .secondTitle {
+        font-size: 45px;
+        color: #fff;
+        position: relative;
+        top: -59px;
+        padding-left: 20px;
+    }
+    .paragraph {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 1.9;
+        letter-spacing: 2px;
+        color: #333333b5;
+        padding: 0px 50px;
+        text-align: justify;
+    }
+}
+#thirdContent {
+    margin-top: 50px;
+    .machineTitle {
+        padding: 30px 0px;
+    }
+    .thirdCon {
+        width: 460px;
+        float: left;
+        line-height: 2.2;
+    }
+    p.content {
+        background: url(../img/bg_mind03.png) no-repeat center;
+        font-size: 13px;
+        padding: 20px;
+        line-height: 2.0;
+        letter-spacing: 2px;
+        color: #333333b5;
+        text-align: justify;
+    }
+}
+#fourthContent {
+    margin-top: 50px;
+    .fourthTitle{
+        margin-top: -163px;
+        padding: 42px 50px;
+    }
+    .paragraph {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 1.9;
+        letter-spacing: 2px;
+        color: #333333b5;
+        padding: 0px 50px;
+        text-align: justify;
+    }
+}
+#video {
+    margin-top: 50px;
+    .videoContent {
+        width: 100%; 
+        padding-bottom: 10px; 
+     }
+     .rwd-media {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+    .rwd-media iframe,
+    .rwd-media video {
+        position: absolute;
+        width: 100%;
+        height: 100%;  
+    }
+    .videoTitle {
+       font-size: 1.998vw;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        color: #333333;
+        
+    }
+   .videoImg {
+        position: absolute;
+        margin-top: -61px;
+        z-index: 10;
+        width: 17%;
+        margin-left: 30px;
+    }
+}
+@media (max-width: 767px) {
+    #mainContent {
+        .dnaTitle {
+            padding: 20px 0px;
+            width: 50%;
+        }
+    }
+    #secondContent {
+        .secondTitle {
+            font-size: 20px;
+            color: #fff;
+            position: relative;
+            top: -33px;
+            padding: 0px 20px; 
+        }
+       .paragraph {
+            font-size: 13px;
+            padding: 10px;
+            text-align: justify;
+        }
+    }
+    #thirdContent {
+        .thirdPar {
+            padding: 10px;}
+        .machineTitle {
+            padding: 10px 0px;
+            width: 50%;
+        }
+    }
+    #fourthContent {
+        .fourthTitle {
+            margin-top: -150px;
+            padding: 29px 10px;
+            width: 50%;
+            height: 50%;
+        }
+        .paragraph {
+            font-size: 13px;
+            padding: 10px;
+            }
+        }
+    #video {
+        .videoImg {
+            position: absolute;
+            margin-top: -19px;
+            margin-left: 0px;
+        }
+        .videoTitle {
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 40px;
+            color: #333333;
+        }
+    }
+ }

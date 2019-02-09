@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+//  汎用パーツ
+// ---------------------------------------------
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+//---------------------------------------------
+// 下層ページ
+//---------------------------------------------
+#eyecatch{//アイキャッチ画像
+    @include max-mq() {
+        img{
+            width:100%;
+        }
+    }
+}
+
+#breadcrumbs{//パンくずリスト
+    background: #dfeeff;
+    padding:5px 0;
+
+    ol{
+        li{
+            display: inline-block;
+            line-height:1;
+            margin-right:5px;
+            &:before{
+                content: "＞";
+                display: inline-block;
+                vertical-align: top;
+                margin-right:2px;
+            }
+            &:first-child{
+                &:before{
+                    content:normal;
+                }
+            }
+        }
+    }
+    @include max-mq() {
+        ol{
+            li{
+                margin-right:3px;
+                &:before{
+                    margin-right:2px;
+                }
+            }
+        }
+    }
+}
+
+
+//ページネーション／ページャ
+.pagination:empty{
+    display: none;
+}
+.pagination{
+    background: #dfeeff;
+    padding:10px;
+
+    .page-numbers{
+        display: inline-block!important;
+        border: solid 1px #4a6e92;
+        border-radius: 5px;
+        font-size:percentage(15/16);
+        font-weight: bold;
+        background: #fff;
+        width:2em;
+        padding: 6px 0;
+        line-height:1;
+        text-align:center;
+        letter-spacing: -1px;
+
+        &.current{
+            background: #b2d6ff;
+        }
+    }
+}
+
+
+//table表
+table{
+    width:100%;
+
+    tr{
+        
+    }
+    th,td{
+        padding:15px;
+        text-align: left;
+        border: solid 1px #c2d9e9;
+        box-sizing: border-box;
+    }
+    th{
+        background: #e7f3fb;
+        color:#345372;
+        font-weight:bold;
+    }
+    td{
+        background: #fff;
+    }
+
+    @include max-mq() {
+        display: block;
+        tbody,tr,th,td{
+            width:100%!important;
+            display: block;
+        }
+        th{
+            padding: 5px 2px 3px;
+            &:before{
+                margin-right: 1px;
+            }
+        }
+        td{
+            padding-top: 5px;
+        }
+    }
+}
+

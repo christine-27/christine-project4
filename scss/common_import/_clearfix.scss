@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// ---------------------------------------------
+// clearfix
+// ---------------------------------------------
+
+// For modern browsers
+.cf:before,
+.cf:after{
+    content: "" !important;
+    display: block !important;
+    overflow: hidden !important;
+}
+
+.cf:after{
+    clear: both !important;
+}
+
+// For IE 6/7 (trigger hasLayout)
+.cf{
+    zoom: 1 !important;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// font
+$font-serif: Georgia, "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
+
+// breakpoint
+$max-breakpoints: (
+        /*'sm': 640px,*/
+        'tb': 767px,
+        /*'pc': 960px*/
+);
+$min-breakpoints: (
+        /*'tb': 641px,*/
+        'pc': 768px
+);
+
+
+// responsive
+@mixin max-mq($breakpoint: tb) {//767px以下
+  @media (max-width: #{map-get($max-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin min-mq($breakpoint: pc) {//768px以上
+  @media (min-width: #{map-get($min-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@include min-mq() {//768px以上
+  .hidden-pc {
+    display: none;
+  }
+}
+@include max-mq() {//767px以下
+  .hidden-sp {
+    display: none;
+  }
+}
